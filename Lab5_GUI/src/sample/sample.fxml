@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="730.0" style="-fx-background-color: #6a85b0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane layoutX="-1.0" layoutY="31.0" prefHeight="514.0" prefWidth="730.0" style="-fx-background-color: eee1f0;">
+            <children>
+                <TextField fx:id="priceFromField" layoutX="100.0" layoutY="211.0" prefWidth="100.0" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></TextField>
+                <TextField fx:id="priceToField" layoutX="223.0" layoutY="211.0" prefWidth="100.0" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></TextField>
+                <Label layoutX="19.0" layoutY="214.0" prefHeight="22.0" prefWidth="78.0" text="Price from">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Label>
+                <Label layoutX="200.0" layoutY="216.0" text=" to">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Label>
+                <Button fx:id="filterButton" layoutX="335.0" layoutY="211.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="126.0" style="-fx-background-radius: 10;" text="FILTER">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Button>
+                <TextField fx:id="titleField" layoutX="203.0" layoutY="98.0" prefHeight="28.0" prefWidth="210.0" promptText="title" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></TextField>
+                <Button fx:id="deleteButton" layoutX="568.0" layoutY="98.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: d13f4e; -fx-background-radius: 10;" text="DELETE">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Button>
+                <Button fx:id="showPriceButton" layoutX="417.0" layoutY="98.0" mnemonicParsing="false" prefWidth="134.0" style="-fx-background-radius: 10;" text="SHOW PRICE">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Button>
+                <Button fx:id="changePriceButton" layoutX="420.0" layoutY="134.0" mnemonicParsing="false" prefWidth="134.0" style="-fx-background-radius: 10;" text="CHANGE PRICE">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Button>
+                <TextField fx:id="newPriceField" layoutX="204.0" layoutY="134.0" maxHeight="-Infinity" prefHeight="28.0" prefWidth="210.0" promptText="new price" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></TextField>
+                <Button fx:id="showAllButton" layoutX="468.0" layoutY="211.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="254.0" style="-fx-background-radius: 10; -fx-background-color: ffbd59;" text="SHOW ALL" textAlignment="CENTER">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font></Button>
+                <Button fx:id="addButton" layoutX="567.0" layoutY="39.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #279c54; -fx-background-radius: 10;" text="ADD" textAlignment="CENTER">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="prodidToAddField" layoutX="64.0" layoutY="39.0" prefWidth="134.0" promptText="prodid" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="titleToAddField" layoutX="203.0" layoutY="39.0" prefWidth="209.0" promptText="title" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="costToAddField" layoutX="417.0" layoutY="39.0" prefWidth="134.0" promptText="price" style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Verdana" size="14.0" />
+                    </font>
+                </TextField>
+                <TableView fx:id="table" layoutY="246.0" prefHeight="268.0" prefWidth="730.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="69.5999755859375" text="id" />
+                        <TableColumn fx:id="prodidColumn" prefWidth="150.40003204345703" text="prodid" />
+                        <TableColumn fx:id="titleColumn" minWidth="0.0" prefWidth="339.9999084472656" text="titile" />
+                        <TableColumn fx:id="costColumn" minWidth="0.0" prefWidth="168.79996337890623" text="cost" />
+                    </columns>
+                </TableView>
+              <Label fx:id="resultLabel" layoutX="5.0" layoutY="3.0" prefHeight="22.0" prefWidth="535.0" textFill="RED">
+                  <font>
+                      <Font name="Verdana Italic" size="14.0" />
+                  </font>
+              </Label>
+            </children>
+        </AnchorPane>
+        <Button fx:id="exitButton" layoutX="629.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: #d13f4e; -fx-background-radius: 0;" text="EXIT">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
